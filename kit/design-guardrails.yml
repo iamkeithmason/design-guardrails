@@ -1,0 +1,23 @@
+# Copy to .github/workflows/design-guardrails.yml in a project.
+# Runs on pull requests only, and skips when only docs changed. GitHub bills
+# each job in whole minutes, so keep it to one job.
+name: design guardrails
+on:
+  pull_request:
+    paths-ignore: ['**/*.md', 'docs/**']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      # Prove the browser is there before checking anything: a check that
+      # could not look must never read as one that found nothing.
+      - run: npx playwright install --with-deps chromium && npx playwright --version
+      - run: npx design-guardrails
+        env:
+          GUARDRAILS_TEST_EMAIL: ${{ secrets.GUARDRAILS_TEST_EMAIL }}
+          GUARDRAILS_TEST_PASSWORD: ${{ secrets.GUARDRAILS_TEST_PASSWORD }}

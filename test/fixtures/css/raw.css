@@ -1,0 +1,3 @@
+.a:hover { transition: color 0.3s ease; }
+.b { transition: color var(--duration-state) var(--ease-state); }
+@keyframes pop { to { opacity: 1; } }

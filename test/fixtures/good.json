@@ -1,0 +1,8 @@
+{
+  "serve": { "static": "test/fixtures/good", "routes": ["/"] },
+  "mode": "strict",
+  "tokens": { "colour": { "prefix": ["--ink", "--paper", "--accent"] }, "easing": { "allow": [] } },
+  "type": { "styles": { "body": ".text-body", "title": ".text-title" } },
+  "icons": { "match": "svg.icon", "box": ".icon-box", "pairWith": ["body", "title"], "minInkShare": 0.6 },
+  "source": { "css": ["test/fixtures/good/*.css"] }
+}

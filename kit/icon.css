@@ -1,0 +1,5 @@
+/* One icon, sized from the type it sits in: the icon is the text's font size
+   (1em) and its box is the text's line height (1lh). There is no icon scale to
+   drift. A tap target wraps the box; it never resizes the icon. */
+.icon-box { display: inline-flex; align-items: center; justify-content: center; height: 1lh; vertical-align: top; }
+.icon { width: 1em; height: 1em; flex: none; stroke-width: var(--icon-stroke, 1.5); color: inherit; }

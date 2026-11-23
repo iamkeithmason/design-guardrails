@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Good</title>
+<style>
+:root {
+  --ink: #1a1a1a; --paper: #fafafa; --accent: #8b5e3c;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-4: 1rem; --space-6: clamp(1rem, 3vw, 2rem);
+  --radius-sm: 4px; --radius-card: 16px;
+  --duration-enter: 300ms; --duration-state: 150ms;
+  --ease-enter: cubic-bezier(0.16, 1, 0.3, 1); --ease-state: ease-out;
+}
+h1, p { margin: 0; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.5 system-ui, sans-serif; }
+.text-body { font: 400 16px/1.5 system-ui, sans-serif; letter-spacing: normal; }
+.text-title { font: 700 24px/1.25 system-ui, sans-serif; }
+main { padding: var(--space-6); display: grid; gap: var(--space-4); }
+.card { padding: var(--space-4); border: 1px solid var(--accent); border-radius: var(--radius-card);
+  transition: background-color var(--duration-state) var(--ease-state); }
+.icon-box { display: inline-flex; align-items: center; height: 1lh; }
+.icon { width: 1em; height: 1em; }
+@media (prefers-reduced-motion: no-preference) {
+  .card { animation: rise var(--duration-enter) var(--ease-enter) both; }
+}
+@keyframes rise { from { transform: translateY(12px); } to { transform: none; } }
+</style></head>
+<body>
+<main>
+  <h1 class="text-title">A title</h1>
+  <p class="text-body">Some body text <span class="icon-box"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 0h16v16H0z" fill="currentColor"/></svg></span></p>
+  <div class="card"><p class="text-body">In a card</p></div>
+</main>
+</body></html>

@@ -1,0 +1,16 @@
+{
+  "serve": { "command": "npm run preview", "url": "http://localhost:4173", "routes": ["/"] },
+  "widths": [1440, 390],
+  "mode": "strict",
+  "tokens": {
+    "colour":   { "prefix": ["--palette-", "--text-", "--bg-", "--border-"] },
+    "space":    { "prefix": ["--space-"] },
+    "radius":   { "prefix": ["--radius-"] },
+    "duration": { "prefix": ["--duration-"] },
+    "easing":   { "prefix": ["--ease-"], "allow": ["linear"] }
+  },
+  "type": { "styles": { "display": ".text-display", "title": ".text-title", "body": ".text-body", "caption": ".text-caption", "label": ".text-label" } },
+  "icons": { "match": ".icon", "box": ".icon-box", "pairWith": ["body", "caption", "title"], "minInkShare": 0.6, "tapTarget": 44 },
+  "source": { "css": ["src/**/*.css"], "tokensFile": ["src/styles/tokens.css"] },
+  "exceptions": []
+}
