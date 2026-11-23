@@ -19,8 +19,8 @@ fails on a value that is not a token, a named type style, or a listed exception.
 ## Use
 
 ```sh
-npm i -D playwright github:iamkeithmason/design-guardrails#main
-# pin to a commit or a tag once one exists, so updates are deliberate
+npm i -D playwright github:iamkeithmason/design-guardrails#v0.1.0
+# pinned to a release, so updates arrive only when you move the tag
 npx design-guardrails --baseline   # existing project: record today's drift, once
 npx design-guardrails              # check
 npx design-guardrails --report     # the full inventory per family
