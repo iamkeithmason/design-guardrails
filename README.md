@@ -54,4 +54,4 @@ then the CLI end to end on `test/fixtures/bad` (one of each defect, must exit 1
 and name each) and `test/fixtures/good` (must exit 0).
 
 Proven on the portfolio on 23 November 2026: the same 65 text treatments as its
-own `check:design`, byte for byte, and no colour beyond the listed Intruder navy.
+own `check:design`, the same set exactly, and no colour outside its tokens beyond one listed exception.
