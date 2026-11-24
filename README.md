@@ -48,6 +48,13 @@ the CI job. `kit/icon.css` is the icon pair the icon rule expects.
   icons sit inside larger containers.
 - Images, canvas, video, native screens and print are out of scope.
 
+## References
+
+`references/` holds the reasoning behind the design-guardrails skill's rules,
+for a person or an agent to read before a decision the rules don't settle.
+`references/motion.md` covers how Emil Kowalski approaches interface motion,
+with worked examples from the portfolio.
+
 ## Tests
 
 `npm test`: the pure classifier and the source rule against planted defects,
